@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciberseguridad 01 - Malware</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    :root {
+        --fondo: #1e2a2a;
+        --tabla-fondo: #f4f4f4;
+        --tabla-encabezado: #2ca58d;
+        --tabla-texto: #041047;
+        --tabla-hover: #f46197;
+        --titulo-color: #f4f4f4;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--fondo);
+        color: var(--titulo-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #fff;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    }
+
+    table {
+        width: 95%;
+        border-collapse: collapse;
+        background-color: var(--tabla-fondo);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    th, td {
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    th {
+        background-color: var(--tabla-encabezado);
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e0f7f4;
+        color: var(--tabla-texto);
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffffff;
+        color: var(--tabla-texto);
+    }
+
+    tr:hover {
+        background-color: var(--tabla-hover);
+        color: #fff;
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    td {
+        border-bottom: 1px solid #d0d0d0;
+    }
+
+    nav.navbar {
+        margin-top: 30px;
+        width: 95%;
+        height: 60px;
+        background-color: #f46197;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+</style>
+</head>
+<body>
+
+<h1>Ciberseguridad 01</h1>
+<h2>Tipos de Malware</h2>
+
+<table>
+    <tr>
+        <th>Tipo de Malware</th>
+        <th>Función</th>
+        <th>Impacto</th>
+    </tr>
+    <tr>
+        <td>Virus</td>
+        <td>Auto replicable, infecta archivos</td>
+        <td>Daño de datos al igual que de sistema</td>
+    </tr>
+    <tr>
+        <td>Gusanos</td>
+        <td>Se propaga a través de las redes</td>
+        <td>Interrupción de la red, agotamiento de recursos</td>
+    </tr>
+    <tr>
+        <td>Caballo de Troya</td>
+        <td>Se disfraza de software legítimo</td>
+        <td>Robo de datos, control de sistema</td>
+    </tr>
+    <tr>
+        <td>Software espía</td>
+        <td>Supervisa en secreto la actividad del usuario</td>
+        <td>Violación de privacidad, robo de datos</td>
+    </tr>
+    <tr>
+        <td>Software publicitario</td>
+        <td>Muestra anuncios no deseados</td>
+        <td>Molestia, degradación del rendimiento</td>
+    </tr>
+    <tr>
+        <td>Rootkit</td>
+        <td>Oculta software malicioso</td>
+        <td>Acceso no autorizado, amenazas persistentes</td>
+    </tr>
+    <tr>
+        <td>Keylogger</td>
+        <td>Registra las pulsaciones de teclas</td>
+        <td>Robo de credenciales, filtración de datos</td>
+    </tr>
+    <tr>
+        <td>Fileless Malware</td>
+        <td>Corre en la memoria</td>
+        <td>Ataques sigilosos y difíciles de detectar</td>
+    </tr>
+    <tr>
+        <td>Cryptojacker</td>
+        <td>Minas de criptomonedas</td>
+        <td>Problemas de rendimiento, secuestro de recursos</td>
+    </tr>
+    <tr>
+        <td>Red de bots (Botnet)</td>
+        <td>Crea una red de dispositivos infectados</td>
+        <td>Ataque DDoS, distribución de spam</td>
+    </tr>
+    <tr>
+        <td>Bomba lógica (Logic Bomb)</td>
+        <td>Ejecuta código en el disparador</td>
+        <td>Destrucción de datos, daños al sistema</td>
+    </tr>
+    <tr>
+        <td>Wiper (LimpiaBrisas)</td>
+        <td>Destruye datos</td>
+        <td>Pérdida irreversible de datos</td>
+    </tr>
+</table>
+
+<nav class="navbar"></nav>
+
+</body>
+</html>

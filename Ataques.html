@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ataques Cibernéticos</title>
+  <style>
+    :root {
+      --azul-oscuro: #1e3c72;
+      --azul-claro: #2a5298;
+      --fondo: #f4f6f9;
+      --blanco: #ffffff;
+      --gris: #dfe4ea;
+      --rosa: #ff6b81;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-claro));
+      color: #333;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--blanco);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .tabla-ciber {
+      width: 95%;
+      margin: auto;
+      border-collapse: collapse;
+      background: var(--blanco);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .tabla-ciber thead {
+      background: var(--azul-oscuro);
+      color: var(--blanco);
+    }
+
+    .tabla-ciber th,
+    .tabla-ciber td {
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 15px;
+      border-bottom: 1px solid var(--gris);
+    }
+
+    .tabla-ciber th {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .tabla-ciber tr:hover {
+      background: var(--rosa);
+      color: var(--blanco);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .tabla-ciber img {
+      width: 90px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>Ataques de Ciberseguridad</h1>
+  <table class="tabla-ciber" id="tablaCiberseguridad">
+    <thead>
+      <tr>
+        <th>Ataque</th>
+        <th>Descripción</th>
+        <th>Impacto</th>
+        <th>Ejemplo</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const ataques = [
+      {
+        "ataque":"Phishing",
+        "descripcion": "Engaña al usuario para robar credenciales mediante correos falsos.",
+        "impacto":"Robo de identidad, pérdida de datos.",
+        "ejemplo":"Correo falso de un banco solicitando datos.",
+        "imagen":"imagenes/phishing.jpeg"
+      },
+      {
+        "ataque":"Malware",
+        "descripcion": "Software malicioso diseñado para dañar o explotar sistemas.",
+        "impacto":"Pérdida de datos, control del sistema.",
+        "ejemplo":"Un troyano que se instala al abrir un archivo adjunto.",
+        "imagen":"imagenes/malware.jpeg"
+      },
+      {
+        "ataque":"Ransomware",
+        "descripcion": "Bloquea el acceso a los archivos y pide rescate económico.",
+        "impacto":"Secuestro de datos.",
+        "ejemplo":"El ataque de WannaCry en 2017.",
+        "imagen":"imagenes/ransomware.jpeg"
+      },
+      {
+        "ataque":"Denegación de servicio (DoS)",
+        "descripcion": "Sobrecarga un sistema para que deje de funcionar.",
+        "impacto":"Interrupción de servicios.",
+        "ejemplo":"Un sitio bancario inaccesible tras millones de solicitudes.",
+        "imagen":"imagenes/DoS.png"
+      },
+      {
+        "ataque":"DDoS",
+        "descripcion": "DoS proveniente de múltiples dispositivos comprometidos.",
+        "impacto":"Caída de servicios a gran escala.",
+        "ejemplo":"Ataque a Dyn en 2016 afectando Twitter y Netflix.",
+        "imagen":"imagenes/DDos.png"
+      },
+      {
+        "ataque":"Inyección SQL",
+        "descripcion": "Inserta código SQL malicioso en formularios para acceder a bases de datos.",
+        "impacto":"Acceso no autorizado a datos.",
+        "ejemplo":"Un atacante obtiene contraseñas desde un formulario vulnerable.",
+        "imagen":"imagenes/SQL.png"
+      },
+      {
+        "ataque":"Fuerza Bruta",
+        "descripcion": "Intento sistemático de adivinar contraseñas mediante prueba y error.",
+        "impacto":"Compromiso de cuentas.",
+        "ejemplo":"Usar un script para probar miles de combinaciones de contraseña.",
+        "imagen":"imagenes/Fuerza bruta.jpeg"
+      },
+      {
+        "ataque":"Man-in-the-Middle",
+        "descripcion": "El atacante intercepta la comunicación entre dos partes.",
+        "impacto":"Intercepción de información privada.",
+        "ejemplo":"Capturar credenciales en una Wi-Fi pública.",
+        "imagen":"imagenes/Man.jpeg"
+      },
+      {
+        "ataque":"Zero-Day",
+        "descripcion": "Explotar vulnerabilidades desconocidas antes de que se publique un parche.",
+        "impacto":"Compromiso total del sistema sin aviso.",
+        "ejemplo":"Malware que explota falla en Windows antes de parche.",
+        "imagen":"imagenes/ZERO-DAY.png"
+      },
+      {
+        "ataque":"Keylogging",
+        "descripcion": "Registra las pulsaciones del teclado sin que el usuario lo note.",
+        "impacto":"Robo de contraseñas e información confidencial.",
+        "ejemplo":"Un keylogger captura contraseñas escritas en el navegador.",
+        "imagen":"imagenes/keylogging.png"
+      },
+      {
+        "ataque":"Cross-Site Scripting (XSS)",
+        "descripcion": "Inserción de scripts maliciosos que se ejecutan en el navegador del usuario.",
+        "impacto":"Robo de cookies, secuestro de sesión.",
+        "ejemplo":"JavaScript inyectado en un foro para robar cookies.",
+        "imagen":"imagenes/(XSS).jpeg"
+      },
+      {
+        "ataque":"Ingeniería Social",
+        "descripcion": "Manipulación psicológica para que usuarios revelen información.",
+        "impacto":"Acceso o información comprometida.",
+        "ejemplo":"Un atacante se hace pasar por técnico para acceder a un servidor.",
+        "imagen":"imagenes/ingenieria social.png"
+      }
+    ];
+
+    const cuerpoTabla = document.querySelector("#tablaCiberseguridad tbody");
+    ataques.forEach(ataque => {
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+        <td>${ataque.ataque}</td>
+        <td>${ataque.descripcion}</td>
+        <td>${ataque.impacto}</td>
+        <td>${ataque.ejemplo}</td>
+        <td><img src="${ataque.imagen}" alt="${ataque.ataque}"></td>
+      `;
+      cuerpoTabla.appendChild(fila);
+    });
+  </script>
+</body>
+</html>
+
+

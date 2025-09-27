@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jQuery y Bootstrap 3 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Fuente opcional -->
+  <link href="https://fonts.cdnfonts.com/css/schnoerkel-caps" rel="stylesheet">
+
+  <title>Sherlyn Alegria</title>
+
+  <style>
+    /* Variables de color */
+    :root {
+      --baby-blue: #92c1dfff;
+      --picton-blue: #3dceeeff;
+      --salmon: #ff5f5f;
+      --tiffany-blue: #f5f5f5;
+      --vivid-sky-blue: #3dceee;
+      --columbia-blue: #c1cfdaff;
+      --texto-blanco: #ffffff;
+      --texto-oscuro: #041047;
+    }
+
+    /* BODY */
+    body {
+      font-family: 'Schnoerkel Caps', sans-serif;
+      background: linear-gradient(135deg, #92c1df 0%, #3dceee 100%);
+      color: var(--texto-blanco);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--salmon);
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .navbar-brand {
+      font-size: 22px;
+      color: var(--tiffany-blue) !important;
+      font-weight: bold;
+      padding: 10px 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .nav > li > a {
+      color: var(--tiffany-blue) !important;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+      color: var(--vivid-sky-blue) !important;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-menu {
+      background-color: var(--columbia-blue);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin-top: 10px;
+    }
+
+    .dropdown-item {
+      color: var(--texto-oscuro);
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--vivid-sky-blue);
+      color: var(--texto-blanco);
+      transition: 0.3s;
+    }
+
+    /* JUMBOTRON */
+    .jumbotron {
+      background: linear-gradient(135deg, #3dceee, #92c1df);
+      color: var(--texto-blanco);
+      text-align: center;
+      padding: 100px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      margin: 20px auto;
+    }
+
+    .gantz-text h1 {
+      font-size: 80px;
+      margin-bottom: 10px;
+      background: url('.jpeg') no-repeat center center; 
+      background-size: cover;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .gantz-text h3 {
+      font-size: 40px;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    }
+
+    .gantz-text p {
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .gantz-text h1 {
+        font-size: 50px;
+      }
+      .gantz-text h3 {
+        font-size: 28px;
+      }
+      .gantz-text p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="ale.html">Inicio</a>
+      <div class="collapse navbar-collapse" id="navbarnavDropdown">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Unidad 1 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Conceptos.html">Conceptos</a></li>
+              <li><a class="dropdown-item" href="Ataques.html">Ataques</a></li>
+              <li><a class="dropdown-item" href="#">Protección</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Unidad 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Conceptos</a></li>
+              <li><a class="dropdown-item" href="#">Ataques</a></li>
+              <li><a class="dropdown-item" href="#">Protección</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Unidad 3 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Conceptos</a></li>
+              <li><a class="dropdown-item" href="#">Ataques</a></li>
+              <li><a class="dropdown-item" href="#">Protección</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="gantz-text">
+      <h1>Sherlyn Alegria</h1>
+      <h3>Programación 5TOA</h3>
+      <p>CONSTRUYE PÁGINAS WEB</p>
+    </div>
+  </div>
+
+</body>
+</html>
