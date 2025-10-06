@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <title>Calculadora</title>
+
+  <style>
+    :root {
+      --blood-red: #5c0000;
+      --dark-night: #0d0d0d;
+      --goth-purple: #1c0f1a;
+      --bone-white: #f6ebeb;
+      --cyclamen: #e63973;
+      --baby-powder: #fefefe;
+      --cambridge-blue: #a3c1ad;
+    }
+
+    body {
+      font-family: 'UnifrakturCook', cursive;
+      background-color: var(--dark-night);
+      color: var(--bone-white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .navbar {
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .calc {
+      background-color: var(--goth-purple);
+      border: 2px solid var(--blood-red);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px var(--blood-red);
+      width: 260px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #ans {
+      width: 100%;
+      height: 50px;
+      font-size: 22px;
+      text-align: right;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      padding: 5px 10px;
+      color: var(--dark-night);
+    }
+
+    .btn {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .btn input {
+      width: 55px;
+      height: 45px;
+      font-size: 18px;
+      border-radius: 8px;
+      background-color: var(--blood-red);
+      color: var(--bone-white);
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn input:hover {
+      background-color: var(--cyclamen);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-light" style="background-color: var(--cyclamen);">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" style="color:var(--baby-powder);">Inicio</a>
+      </div>
+    </nav>
+
+    <div class="jumbotron" style="background-color: var(--cambridge-blue); color: var(--dark-night);">
+      <h2 style="text-align:center;">🧮 Calculadora</h2>
+      <div class="calc">
+        <input type="text" id="ans" readonly>
+        <div class="btn">
+          <input type="button" value="C" onclick="Clear()">
+          <input type="button" value="%" onclick="Solve('%')">
+          <input type="button" value="←" onclick="Back()">
+          <input type="button" value="/" onclick="Solve('/')">
+          <input type="button" value="7" onclick="Solve('7')">
+          <input type="button" value="8" onclick="Solve('8')">
+          <input type="button" value="9" onclick="Solve('9')">
+          <input type="button" value="x" onclick="Solve('*')">
+          <input type="button" value="4" onclick="Solve('4')">
+          <input type="button" value="5" onclick="Solve('5')">
+          <input type="button" value="6" onclick="Solve('6')">
+          <input type="button" value="-" onclick="Solve('-')">
+          <input type="button" value="1" onclick="Solve('1')">
+          <input type="button" value="2" onclick="Solve('2')">
+          <input type="button" value="3" onclick="Solve('3')">
+          <input type="button" value="+" onclick="Solve('+')">
+          <input type="button" value="00" onclick="Solve('00')">
+          <input type="button" value="0" onclick="Solve('0')">
+          <input type="button" value="." onclick="Solve('.')">
+          <input type="button" value="=" onclick="Result()">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const Solve = (val) => {
+      document.getElementById('ans').value += val;
+    }
+
+    const Result = () => {
+      try {
+        const v1 = document.getElementById('ans').value;
+        if (v1) {
+          document.getElementById('ans').value = eval(v1);
+        }
+      } catch {
+        document.getElementById('ans').value = 'Error';
+      }
+    }
+
+    const Clear = () => {
+      document.getElementById('ans').value = '';
+    }
+
+    const Back = () => {
+      const back = document.getElementById('ans');
+      back.value = back.value.slice(0, -1);
+    }
+  </script>
+</body>
+</html>
+
